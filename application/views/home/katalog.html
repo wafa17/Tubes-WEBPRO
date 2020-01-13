@@ -1,0 +1,1964 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  
+	<script src="js/analytics.js"></script>
+ <style>
+.journalbutton { 
+    padding: 20px; 
+    border-radius: 5px;
+	border : 3px #C9302C solid;
+	font-size:14px;
+	font-weight:bold;
+}
+.box-title{
+	padding:10px; 
+	font-size:18px;
+	font-weight:bold;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	margin-bottom:5px;
+	background-color:#C9302C;
+	color:#fff;
+	border-radius:10px 10px 0 0;
+	text-align:center;
+}
+
+.box-title-small{
+	padding:3px; 
+	font-size:18px;
+	font-weight:bold;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	margin-bottom:5px;
+	background-color:#C9302C;
+	color:#fff;
+	border-radius:10px 10px 0 0;
+	text-align:center;
+}
+
+#myModal .modal-dialog
+{
+  width: 55%;
+}
+ </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Open Library - Katalog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="title" content="OpenLibrary - Telkom University" />
+<meta name="description" content="perpustakaan digital universitas telkom. disini tersedia informasi seluruh koleksi pustaka yang dimiliki universitas telkom yang terbuka dan dapat dipinjam oleh publik" />
+<meta name="keywords" content="perpustakaan telkom, perpustakaan universitas telkom, telkom university, universitas telkom, perpustakaan" />
+<meta name="language" content="id" />
+<meta name="robots" content="index, follow" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap -->
+     <link href="G:\My Drive\perkuliahan\smst 4\WEBPRO\TubesWebpro\css\tampilan.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="G:\My Drive\perkuliahan\smst 4\WEBPRO\TubesWebpro\css\plugin.css" rel="stylesheet" media="screen" type="text/css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container container-imtelkom">
+      <div class="navbar navbar-default navbar-imtelkom">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">OPEN LIBRARY</a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li id="home_index">
+                            <a href="/">Beranda</a>
+              
+            </li>
+            <li id="home_catalog"><a href="/home/catalog.html">Katalog</a></li> 
+			 <li id="home_eproceeding"><a target="_blank" href="http://libraryeproceeding.telkomuniversity.ac.id">E-Publications</a></li>
+			 <li id="home_aboutus"><a href="/home/aboutus.html">About Us</a></li>
+           
+			 <li id="home_gallery"><a href="/home/gallery.html">Gallery</a></li>
+              </ul>  </li>
+			
+          </ul>
+
+         
+          <form class="navbar-form navbar-form-imtelkom form-inline navbar-right" method="post" action="/member/login/action.html">
+         <!-- <div class="form-group" style="float:left;margin-right:10px;font-weight:bold"> 
+			 	 Silahkan Lakukan login dengan akun SSO. <br>Jika tidak ada silahkan <span style="color:green">daftar</span> untuk menjadi member.
+		   </div>
+		   <br>   -->
+		   <div class="form-group"  >
+              <input type="text" name="username" placeholder="Username" class="form-control input-sm">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" placeholder="Password" class="form-control input-sm">
+            </div>
+            <button type="submit" name="signin" class="btn btn-sm btn-imtelkom">Login (SSO)</button>
+            <button type="button" name="signin" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal-register">Sign Up</button>
+          </form>
+        
+        </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      
+      <div class="page-header page-header-imtelkom">
+  <h1>Katalog</h1>
+</div>
+
+<div class="row row-imtelkom">
+
+  <div class="col-md-9">
+
+    <div>
+            <div class="col-sm-4 col-md-4 pull-left hidden-xs">
+        <ul class="pagination">
+          <li><a href="/home/catalog/page/1.html">&laquo;</a></li>
+                    <li><a href="/home/catalog/page/1.html"><strong>1</strong></a></li>
+                    <li><a href="/home/catalog/page/2.html">2</a></li>
+                    <li><a href="/home/catalog/page/3.html">3</a></li>
+                    <li><a href="/home/catalog/page/4.html">4</a></li>
+                    <li><a href="/home/catalog/page/5.html">5</a></li>
+                    <li><a href="/home/catalog/page/8570.html">&raquo;</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-sm-8 col-md-8 pull-right">
+        <form method="post" action="">
+          <div class="input-group" style="margin: 20px 0px;">
+                        <input type="text" name="search[keyword]" placeholder="Judul, kode, pengarang, penerbit, subjek atau jenis" class="form-control" value="" />
+            <div class="input-group-btn">
+              <input type="submit" name="submit" class="btn btn-success" value="Search"/>
+
+              <button type="button" class="btn btn-primary dropdown-toggle" id="toggle-popover" data-toggle="modal" data-target="#modal-filter">
+              Advanced Search				<span class="caret"></span>
+                <span class="sr-only">Detailed Search</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="Analisis Faktor-Faktor Penentu Employee Engagement pada PT. ABC Bandung" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1363</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149391/slug/analisis-faktor-faktor-penentu-employee-engagement-pada-pt-abc-bandung.html">Analisis Faktor-Faktor Penentu Employee Engagement pada PT. ABC..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> NI PUTU IRMA MEI LINA<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Human Resources Development</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149391/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149391/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149391/analisis-faktor-faktor-penentu-employee-engagement-pada-pt-abc-bandung.html">tersedia 21 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="ANALISIS KUALITAS WEBSITE VIU.COM MENGGUNAKAN  WEBQUAL 4.0 DAN IMPORTANCE PERFORMANCE ANALYSIS (IPA)" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1368</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149396/slug/analisis-kualitas-website-viu-com-menggunakan-webqual-4-0-dan-importance-performance-analysis-ipa-.html">ANALISIS KUALITAS WEBSITE VIU.COM MENGGUNAKAN  WEBQUAL 4.0..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> MICHKAEL FEB<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>E-business</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149396/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149396/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149396/analisis-kualitas-website-viu-com-menggunakan-webqual-4-0-dan-importance-performance-analysis-ipa-.html">tersedia 21 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>          <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="Analisis Pengaruh Inovasi Produk Terhadap Keunggulan Bersaing Pada UKM &quot;Duren Kamu Pasti Kembali&quot; Di Kota Serang" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1370</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149398/slug/analisis-pengaruh-inovasi-produk-terhadap-keunggulan-bersaing-pada-ukm-duren-kamu-pasti-kembali-di-kota-serang.html">Analisis Pengaruh Inovasi Produk Terhadap Keunggulan Bersaing Pada..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> IMAS FATIMAH HASNATIKA<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Entrepreneurship</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149398/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149398/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149398/analisis-pengaruh-inovasi-produk-terhadap-keunggulan-bersaing-pada-ukm-duren-kamu-pasti-kembali-di-kota-serang.html">tersedia 22 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="ENTREPRENEURSHIP EDUCATION, ENTREPRENEURIAL EXPERIENCES, AND CREATIVITY AFFECT ENTREPRENEURIAL INTENTION IN BUSINESS ADMINISTRATION STUDENTS IN TELKOM UNIVERSITY, BANDUNG." src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1372</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149400/slug/entrepreneurship-education-entrepreneurial-experiences-and-creativity-affect-entrepreneurial-intention-in-business-administration-students-in-telkom-university-bandung-.html">ENTREPRENEURSHIP EDUCATION, ENTREPRENEURIAL EXPERIENCES, AND CREATIVITY AFFECT ENTREPRENEURIAL..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> PHAM VAN THANH TRUC<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>1 Entrepreneurship</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149400/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149400/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149400/entrepreneurship-education-entrepreneurial-experiences-and-creativity-affect-entrepreneurial-intention-in-business-administration-students-in-telkom-university-bandung-.html">tersedia 22 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>          <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="MINAT BELI KONSUMEN: DAMPAK GREEN BRAND DAN GREEN KNOWLEDGE PADA PERUSAHAAN NESTLE INDONESIA" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1361</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149389/slug/minat-beli-konsumen-dampak-green-brand-dan-green-knowledge-pada-perusahaan-nestle-indonesia.html">MINAT BELI KONSUMEN: DAMPAK GREEN BRAND DAN GREEN..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> GIOVANI ANTANIA HANJANI<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Marketing Strategy</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149389/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149389/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149389/minat-beli-konsumen-dampak-green-brand-dan-green-knowledge-pada-perusahaan-nestle-indonesia.html">tersedia 23 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="NIAT KNOWLEDGE SHARING PADA KARYAWAN (Studi Pada PT PLN (Persero) Distribusi Jawa Barat)" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1366</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149394/slug/niat-knowledge-sharing-pada-karyawan-studi-pada-pt-pln-persero-distribusi-jawa-barat-.html">NIAT KNOWLEDGE SHARING PADA KARYAWAN (Studi Pada PT..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> MA`RIFATUL CHOIRIYAH HARTANTRI<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Human Resources Development</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149394/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149394/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149394/niat-knowledge-sharing-pada-karyawan-studi-pada-pt-pln-persero-distribusi-jawa-barat-.html">tersedia 21 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>          <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="PENGARUH CITRA MEREK TERHADAP KEPUTUSAN PEMBELIAN DENGAN KUALITAS PRODUK SEBAGAI VARIABEL INTERVENING (STUDI PADA KONSUMEN J.CO DONUTS &amp; COFFE CABANG BUAH BATU BANDUNG)" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1365</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149393/slug/pengaruh-citra-merek-terhadap-keputusan-pembelian-dengan-kualitas-produk-sebagai-variabel-intervening-studi-pada-konsumen-j-co-donuts-coffe-cabang-buah-batu-bandung-.html">PENGARUH CITRA MEREK TERHADAP KEPUTUSAN PEMBELIAN DENGAN KUALITAS..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> NURUL EVITA<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Marketing</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149393/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149393/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149393/pengaruh-citra-merek-terhadap-keputusan-pembelian-dengan-kualitas-produk-sebagai-variabel-intervening-studi-pada-konsumen-j-co-donuts-coffe-cabang-buah-batu-bandung-.html">tersedia 22 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="Pengaruh Coaching terhadap Kinerja Karyawan pada PT PLN (Persero) Distribusi Jawa Barat dan Banten" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1367</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149395/slug/pengaruh-coaching-terhadap-kinerja-karyawan-pada-pt-pln-persero-distribusi-jawa-barat-dan-banten.html">Pengaruh Coaching terhadap Kinerja Karyawan pada PT PLN..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> HANDIKA EKA PRATAMA<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Human Resources Development</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149395/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149395/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149395/pengaruh-coaching-terhadap-kinerja-karyawan-pada-pt-pln-persero-distribusi-jawa-barat-dan-banten.html">tersedia 22 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>          <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="Pengaruh Emotional Brand Attachment Terhadap Consumer-Based Brand Equity Dengan Consumer Satisfaction Sebagai Mediator (Studi Pada Konsumen Brand Apple)" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1375</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149403/slug/pengaruh-emotional-brand-attachment-terhadap-consumer-based-brand-equity-dengan-consumer-satisfaction-sebagai-mediator-studi-pada-konsumen-brand-apple-.html">Pengaruh Emotional Brand Attachment Terhadap Consumer-Based Brand Equity..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> ICHA CAESARNI DEWITA<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Consumer Behavior</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149403/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149403/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149403/pengaruh-emotional-brand-attachment-terhadap-consumer-based-brand-equity-dengan-consumer-satisfaction-sebagai-mediator-studi-pada-konsumen-brand-apple-.html">tersedia 20 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="media media-imtelkom">
+          <div class="media-left">
+            <div class="thumbnail">
+              <img width="112" title="Pengaruh Islamic Marketing dan Corporate Image terhadap Customer Satisfaction dan Customer Loyalty Luwak White Koffie 2018" src="https://openlibrary.telkomuniversity.ac.id/uploads/book/cover/default.jpg">
+              <div class="caption">
+                  <center>19.04.1364</center>
+              </div>
+            </div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="/home/catalog/id/149392/slug/pengaruh-islamic-marketing-dan-corporate-image-terhadap-customer-satisfaction-dan-customer-loyalty-luwak-white-koffie-2018.html">Pengaruh Islamic Marketing dan Corporate Image terhadap Customer..</a>
+            </h4>
+            <p>
+              <span class="glyphicon glyphicon-user"></span> SABDA RAMADHAN<br/>
+              <span class="glyphicon glyphicon-bullhorn"></span> Universitas Telkom, 2019            </p>
+            <p>
+              <span class="glyphicon glyphicon-tag"></span> C - <br/>
+              <span class="glyphicon glyphicon-bookmark"></span> <b>Karya Ilmiah - Skripsi (S1) - Reference</b> - Non-Sirkulasi            </p>
+<!-- flipbook patch -->
+            <p>
+                                                                                </p>
+<!-- flipbook patch -->
+            <p>
+              <i>Marketing Management</i><br/>
+              <i><small></small></i>
+            </p>
+            <p>
+              Tersedia <a class="item_available" href="/knowledgeitem/149392/available.html">1</a> koleksi dari total <a class="item_stock" href="/knowledgeitem/149392/stock.html">1</a> koleksi<br/>
+              <a class="item_download_generic" href="/pustaka/149392/pengaruh-islamic-marketing-dan-corporate-image-terhadap-customer-satisfaction-dan-customer-loyalty-luwak-white-koffie-2018.html">tersedia 23 file download</a>            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>    
+        <div class="clearfix"></div>
+    <div class="pagination-imtelkom">
+      <ul class="pagination">
+        <li><a href="/home/catalog/page/1.html">&laquo;</a></li>
+                <li><a href="/home/catalog/page/1.html"><strong>1</strong></a></li>
+                <li><a href="/home/catalog/page/2.html">2</a></li>
+                <li><a href="/home/catalog/page/3.html">3</a></li>
+                <li><a href="/home/catalog/page/4.html">4</a></li>
+                <li><a href="/home/catalog/page/5.html">5</a></li>
+                <li><a href="/home/catalog/page/8570.html">&raquo;</a></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+    
+  </div>
+
+  <div class="col-md-3">
+    <h3>Ulasan Terbaru</h3>
+    
+      
+  <div class="collaboration_review_begin"></div>
+
+    <div class="collaboration_review_item">
+    <div>
+        <a href="https://openlibrary.telkomuniversity.ac.id/pustaka/123047/analisis-kebutuhan-bisnis-pt-trengginas-jaya-menggunakan-metode-blue-ocean-strategy-dan-importance-performance-analysis-ipa-.html">
+  ANALISIS KEBUTUHAN BISNIS PT TRENGGINAS JAYA MENGGUNAKAN METODE BLUE OCEAN STRATEGY DAN IMPORTANCE PERFORMANCE ANALYSIS (IPA)</a>
+    </div>
+    <div class="collaboration_review_item_title_date">
+              <span class="collaboration_review_item_rating_5">&nbsp;</span>            <span class="collaboration_review_item_title">Blue Ocean</span>
+      <span class="collaboration_review_item_date">8 April, 2019</span>
+    </div>
+    
+    <div class="collaboration_review_item_member">
+      aisyakhairunisa &ndash; AISYA KHAIRU`NISA    </div>
+  
+    <div class="collaboration_review_item_content">
+            .    </div>
+    
+    <div style="clear: both;"></div>
+  
+  </div>
+    <div class="collaboration_review_item">
+    <div>
+        <a href="https://openlibrary.telkomuniversity.ac.id/pustaka/1450/ekonomi-sumber-daya-alam-dan-lingkungan-suatu-pendekatan-teoritis.html">
+  Ekonomi sumber daya alam, dan lingkungan suatu pendekatan teoritis</a>
+    </div>
+    <div class="collaboration_review_item_title_date">
+              <span class="collaboration_review_item_rating_4">&nbsp;</span>            <span class="collaboration_review_item_title">mantap</span>
+      <span class="collaboration_review_item_date">27 March, 2019</span>
+    </div>
+    
+    <div class="collaboration_review_item_member">
+      riadhyadhy &ndash; MUHAMMAD RIADHI SUBARDI    </div>
+  
+    <div class="collaboration_review_item_content">
+            Open librarynya keren    </div>
+    
+    <div style="clear: both;"></div>
+  
+  </div>
+    <div class="collaboration_review_item">
+    <div>
+        <a href="https://openlibrary.telkomuniversity.ac.id/pustaka/8840/pengantar-desain-komunikasi-visual.html">
+  Pengantar Desain Komunikasi Visual</a>
+    </div>
+    <div class="collaboration_review_item_title_date">
+              <span class="collaboration_review_item_rating_5">&nbsp;</span>            <span class="collaboration_review_item_title">dkv</span>
+      <span class="collaboration_review_item_date">22 March, 2019</span>
+    </div>
+    
+    <div class="collaboration_review_item_member">
+      danunurdiansah &ndash; DANU NURDIANSAH    </div>
+  
+    <div class="collaboration_review_item_content">
+            bagus untuk bab 2    </div>
+    
+    <div style="clear: both;"></div>
+  
+  </div>
+    <div class="collaboration_review_item">
+    <div>
+        <a href="https://openlibrary.telkomuniversity.ac.id/pustaka/30400/adobe-dreamweaver-cs6-dengan-pemrograman-php-mysql.html">
+  Adobe Dreamweaver CS6 dengan pemrograman PHP &amp; MySQL</a>
+    </div>
+    <div class="collaboration_review_item_title_date">
+              <span class="collaboration_review_item_rating_4">&nbsp;</span>            <span class="collaboration_review_item_title">mantapppp</span>
+      <span class="collaboration_review_item_date">22 March, 2019</span>
+    </div>
+    
+    <div class="collaboration_review_item_member">
+      672010601@student.uksw.edu &ndash; noak pakage    </div>
+  
+    <div class="collaboration_review_item_content">
+            untuk menambah sedikit db website imple    </div>
+    
+    <div style="clear: both;"></div>
+  
+  </div>
+    <div class="collaboration_review_item">
+    <div>
+        <a href="https://openlibrary.telkomuniversity.ac.id/pustaka/30400/adobe-dreamweaver-cs6-dengan-pemrograman-php-mysql.html">
+  Adobe Dreamweaver CS6 dengan pemrograman PHP &amp; MySQL</a>
+    </div>
+    <div class="collaboration_review_item_title_date">
+              <span class="collaboration_review_item_rating_4">&nbsp;</span>            <span class="collaboration_review_item_title">mantapppp</span>
+      <span class="collaboration_review_item_date">22 March, 2019</span>
+    </div>
+    
+    <div class="collaboration_review_item_member">
+      672010601@student.uksw.edu &ndash; noak pakage    </div>
+  
+    <div class="collaboration_review_item_content">
+            untuk menambah sedikit db website imple    </div>
+    
+    <div style="clear: both;"></div>
+  
+  </div>
+      <h3>Subjek Populer</h3>
+      <ul class="list-unstyled">
+      <li>
+      <a href="/home/catalog/science+fiction.html">
+        SCIENCE FICTION (5751)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/.html#n/a">
+        #N/A (5284)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/web+programming.html">
+        WEB PROGRAMMING (1398)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/transmisi+telkom.html">
+        Transmisi Telkom (1282)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/rekayasa+perangkat+lunak.html">
+        Rekayasa Perangkat Lunak (1122)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/other.html">
+        other (1100)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/informatika+teori+dan+pemrograman.html">
+        Informatika Teori dan Pemrograman (1006)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/jaringan+multimedia.html">
+        Jaringan Multimedia (941)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/films.html">
+        FILMS (783)
+      </a>
+    </li>
+      <li>
+      <a href="/home/catalog/pengolahan+sinyal+informasi.html">
+        Pengolahan Sinyal Informasi (782)
+      </a>
+    </li>
+    </ul>
+  </div>
+
+</div>
+
+ 
+<script type="text/javascript"  language="javascript">
+  var item_number = 0;
+  var max_item_number = 0;
+  var search = '';
+  
+ // $(document).ready();
+  
+  function getval(data) {
+	//alert(data.value);
+     $.get("https://openlibrary.telkomuniversity.ac.id/home/subject.html", { course: data.value}, retrieveRentItems);
+  }
+  
+  function retrieveRentItems(data) {
+    //setBackgroundStatus('');
+
+    if (data) {
+      if (data.success) {
+        $('#search-mk').html(data.message);
+      }
+      else if (data.message) alert(data.message);
+      else alert('Response dari server tidak dikenali.');
+    }
+    else alert('Response dari server tidak diterima.');
+  }
+  
+  function retrieveKnowledgeStock(data) {
+    setBackgroundStatus('');
+    
+    if (data) {
+      if (data.success == true) {
+        $('#rent_items_container').append(data.message);
+        foundItem = checkItemOnList('knowledge_item_id_' + item_number);
+        if (foundItem != 0) {
+          removeRentItem('rent_item_' + item_number);
+          item_number--;
+          alert('Pustaka sudah ada di daftar pinjaman.');
+        }
+        else {
+          $('#rent_item_new_container').show();
+          $('#rent_items_count').val(item_number);
+          sumRentItems();
+        }
+      }
+      else {
+        if (data.message) alert(data.message);
+        else alert('Response dari server tidak dikenali.');
+        item_number--;
+      }
+    } else item_number--;
+    $('#rent_item_code').val('');
+    $('#rent_item_code').focus();
+  }
+  
+  function validateFormOnSubmit() {
+    if ($('#member_id').val() == '' || $('#member_id').val() == 0) {
+      alert('Anggota yang melakukan peminjaman pustaka tidak valid.');
+      return false;
+    }
+    else return true;
+  }
+  
+  function toggleRentItems(show) {
+    if (show == true) {
+      $('#rent_items_list').show();
+    }
+    else {
+      $('#rent_items_container').empty();
+      $('#rent_items_list').hide();
+      $('#rent_items_on_rent_container').empty();
+      $('#rent_items_on_rent').hide();
+      $('#rent_item_new_container').hide();
+    }
+  }
+  
+  function toggleChangeMember(show) {
+    if (show == true) {
+      $('#member_change').show();
+    }
+    else {
+      $('#member_reader').removeAttr('readonly').val(null).focus();
+      $('#member_change').hide();
+      $('#member_id').val(null);
+      $('#member_detail').html('');
+    }
+  }
+  
+  function changeMember() {
+    if ($('#member_id').val() == null) {
+      alert('Isi dahulu anggota peminjam pustaka.');
+      return false;
+    }
+    if (confirm('Anda akan mengganti anggota peminjam pustaka, hal ini akan mengakibatkan seluruh pustaka yang ada di daftar peminjaman sementara di hapus. Anda yakin ingin mengganti anggota peminjam pustaka?')) {
+      item_number = 0;
+      toggleRentItems(false);
+      toggleChangeMember(false);
+      sumRentItems();
+	  $("#hp_form").hide();
+    }
+    return false;
+  }
+
+  function removeRentItem(sender) {
+    $('#' + sender).remove();
+    sumRentItems();
+  }
+  
+  function checkItemOnList(id) {
+    i = 1;
+    num_item = 0;
+    isUsed = false;
+    newStockId = $('#knowledge_item_id_' + item_number).val();
+    while (i <= item_number && !isUsed) {
+      if (document.getElementById('knowledge_item_id_' + i) != null && ('knowledge_item_id_' + i) != id) {
+        if ($('#knowledge_item_id_' + i).val() == newStockId) {
+          isUsed = true;
+        }
+        else i++;
+        num_item++;
+      }
+      else {
+        i++;
+      }
+    }
+    if (num_item >= max_item_number) {
+      //TODO: do something if count items is more than member max item
+      //alert('Jumlah peminjaman maksimum oleh anggota sebanyak: ' + max_item_number);
+    }
+    if (isUsed) return i;
+    else return 0;
+  }
+  
+  function sumRentItems() {
+    total = 0;
+    for (i = 1; i <= item_number; i++) {
+      if (document.getElementById('knowledge_item_price_' + i) != null && $('#knowledge_item_price_' + i).val() > 0) {
+        total += 1.0 * $('#knowledge_item_price_' + i).val();
+      }
+    }
+    $('#rent_items_price').val(total);
+    $('#rent_item_code').focus();
+  }
+</script> 
+<div id="modal-filter" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-filter" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" action="">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="modal-filter-title">Pencarian Detil Katalog</h4>
+        </div>
+        <div class="modal-body">
+         <!-- <p>Gunakan * untuk melakukan pencarian diperluas. Misalkan ingin mencari katalog dengan judul yang diawali dengan kata <i>analisis</i>, gunakan keyword <i>analisis*</i> pada Judul.</p>-->
+		 
+
+          <div class="form-group">
+            <label for="inputTitle">Jenis</label>
+            <select name="search[type]" class="form-control" id="search-type" placeholder="Pilih jenis katalog">
+              <option value="">Pilih jenis katalog</option>
+                            <option value="9" >Artikel - Restricted Use</option>
+                            <option value="29" >Bahan Ajar</option>
+                            <option value="59" >Buku - Circulation (BI Corner)</option>
+                            <option value="1" >Buku - Circulation (Dapat Dipinjam)</option>
+                            <option value="21" >Buku - Elektronik (E-Book)</option>
+                            <option value="2" >Buku - Reference (Hanya Baca di Tempat)</option>
+                            <option value="3" >Buku - Restricted Use (Khusus Untuk Dosen)</option>
+                            <option value="41" >Buku History Of Indonesia - Reference</option>
+                            <option value="33" >Buku Rekreatif - Circulation</option>
+                            <option value="40" >Buku Softskill - Circulation</option>
+                            <option value="10" >Case Studies</option>
+                            <option value="37" >Case Study Mahasiswa</option>
+                            <option value="13" >CD - Reference</option>
+                            <option value="22" >Disertasi - Reference</option>
+                            <option value="15" >DVD - Reference </option>
+                            <option value="52" >E- Article Staf</option>
+                            <option value="24" >E-Article</option>
+                            <option value="47" >e-Article Paper Review</option>
+                            <option value="51" >e-Laporan Seminar/Pelatihan/Workshop TPA</option>
+                            <option value="44" >Jurnal Internasional - Reference</option>
+                            <option value="42" >Jurnal Nasional - Reference</option>
+                            <option value="43" >Jurnal Terakreditasi DIKTI - Reference</option>
+                            <option value="4" >Karya Ilmiah - Skripsi (S1) - Reference</option>
+                            <option value="6" >Karya Ilmiah - TA (D3) - Reference</option>
+                            <option value="5" >Karya Ilmiah - Thesis (S2) - Reference</option>
+                            <option value="17" >Kaset - Reference</option>
+                            <option value="7" >Laporan Magang - Reference</option>
+                            <option value="12" >Majalah - Reference</option>
+                            <option value="45" >Majalah Ilmiah - Reference</option>
+                            <option value="46" >Majalah Populer - Reference</option>
+                            <option value="50" >Modul Praktikum</option>
+                            <option value="49" >Modul Praktikum ( Electronic )</option>
+                            <option value="28" >Proceeding</option>
+                            <option value="25" >Proceeding ( Electronic )</option>
+                            <option value="23" >Research Report - Reference</option>
+                            <option value="53" >Sharing Knowledge Material</option>
+                            <option value="11" >Teaching Note - Restricted Use</option>
+                            <option value="56" >VCD-Reference</option>
+                          </select>
+          </div>
+          <div class="form-group">
+            <label for="inputTitle">No. Katalog</label>
+            <input type="text" name="search[number]" value="" class="form-control" id="search-number" placeholder="No katalog">
+          </div>  
+
+          <div class="form-group">
+            <label for="inputTitle">Judul</label>
+            <input type="text" name="search[title]" value="" class="form-control" id="search-title" placeholder="Judul katalog">
+          </div>  
+
+          <div class="form-group">
+            <label for="inputTitle">Pengarang</label>
+            <input type="text" name="search[author]" value="" class="form-control" id="search-author" placeholder="Nama pengarang katalog">
+          </div>  
+
+          <div class="form-group">
+            <label for="inputTitle">Penerbit</label>
+            <input type="text" name="search[publisher]"  value="" class="form-control" id="search-publisher" placeholder="Penerbit katalog">
+          </div>  
+        
+          <div class="form-group">
+            <label for="inputTitle">Penyunting/Pembimbing</label>
+            <input type="text" name="search[editor]"  value="" class="form-control" id="search-editor" placeholder="Nama penyunting katalog / nama pembimbing">
+          </div>  
+
+          <div class="form-group">
+            <label for="inputTitle">Subjek</label>
+            <input type="text" name="search[subject]"  value="" class="form-control" id="search-subject" placeholder="Subjek katalog">
+          </div>
+
+          <div class="form-group">
+            <label for="inputTitle">Kode Klasifikasi</label>
+            <input type="text" name="search[classification]"  value="" class="form-control" id="search-classification" placeholder="Kode klasifikasi katalaog">
+          </div>  
+
+          <div class="form-group"> 
+            <label for="inputTitle">Lokasi</label>
+            <select name="search[location]" class="form-control" id="search-location" placeholder="Pilih lokasi">
+              <option value="">Pilih lokasi</option>
+                            <option value="6" >Gedung FIK Lantai 4</option>
+                            <option value="5" >Gedung FIT Lantai 1</option>
+                            <option value="7" >Gedung FIT Lantai 1 (Dalam)</option>
+                            <option value="1" >Gedung FKB Lantai 4</option>
+                            <option value="4" >Gedung FKB Lantai 4 (Dalam)</option>
+                            <option value="8" >Gedung LC Lantai 3</option>
+                            <option value="9" >Gedung Manterawu Lantai 5</option>
+                            <option value="2" >Kampus Geger Kalong</option>
+                            <option value="3" >Kampus Setiabudi</option>
+                          </select>
+          </div>  
+        
+           <!--<div class="form-group">
+            <label for="inputTitle">Periode</label>
+            <select name="search[periode]" class="form-control" id="search-periode" placeholder="Pilih periode">
+                            <option value="1" >Katalog terbaru</option>
+                            <option value="2" >Katalog terbaru seminggu terakhir</option>
+                            <option value="3" >Katalog terpopuler</option>
+                          </select>
+          </div>  -->
+		   <div class="form-group">
+            <label for="inputTitle">Program Studi</label>
+            <select name="search[course]" class="form-control" id="search-course" placeholder="Pilih Program Studi"  onchange="getval(this)">
+				<option value="">Pilih Program Studi</option>
+                            <option value="57402" >D3 Komputerisasi Akuntansi</option>
+                            <option value="57401" >D3 Manajemen Informatika</option>
+                            <option value="61404" >D3 Manajemen Pemasaran</option>
+                            <option value="93402" >D3 Perhotelan</option>
+                            <option value="55401" >D3 Teknik Informatika</option>
+                            <option value="56402" >D3 Teknik Komputer</option>
+                            <option value="20402" >D3 Teknik Telekomunikasi</option>
+                            <option value="57403" >D4 Sistem Multimedia</option>
+                            <option value="62201" >S1 Akuntansi</option>
+                            <option value="90221" >S1 Desain Interior</option>
+                            <option value="90241" >S1 Desain Komunikasi Visual</option>
+                            <option value="90231" >S1 Desain Produk</option>
+                            <option value="61200" >S1 ICT International</option>
+                            <option value="63211" >S1 Ilmu Administrasi Bisnis</option>
+                            <option value="59202" >S1 Ilmu Komputasi</option>
+                            <option value="70201" >S1 Ilmu Komunikasi</option>
+                            <option value="90211" >S1 Kriya Tekstil dan Mode</option>
+                            <option value="61201" >S1 Manajemen (Manajemen Bisnis Telekomunikasi &amp; Informatika)</option>
+                            <option value="90201" >S1 Seni Rupa Murni</option>
+                            <option value="57201" >S1 Sistem Informasi</option>
+                            <option value="56201" >S1 Sistem Komputer</option>
+                            <option value="20201" >S1 Teknik Elektro</option>
+                            <option value="30201" >S1 Teknik Fisika</option>
+                            <option value="26201" >S1 Teknik Industri</option>
+                            <option value="55201" >S1 Teknik Informatika</option>
+                            <option value="20202" >S1 Teknik Telekomunikasi</option>
+                            <option value="20101" >S2 Magister Elektro Komunikasi</option>
+                            <option value="61101" >S2 Magister Manajemen</option>
+                            <option value="55101" >S2 Magister Teknik Informatika</option>
+                          </select>
+          </div> 
+        
+		   <div class="form-group">
+            <label for="inputTitle">Mata Kuliah (Silahkan Pilih Program Studi terlebih dahulu)</label>
+            <select name="search[mk]" class="form-control" id="search-mk" placeholder="Pilih Mata Kuliah">
+				<option value="">Pilih Mata Kuliah</option>
+                          </select>
+          </div> 
+          <div class="form-group">
+            <label for="inputTitle">Tanggal Masuk</label> <br/>
+            dari: <br/>
+            <select name="search[entrance][from][day]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-from-day">
+              <option value=""></option>
+                            <option value="01" >01</option>
+                            <option value="02" >02</option>
+                            <option value="03" >03</option>
+                            <option value="04" >04</option>
+                            <option value="05" >05</option>
+                            <option value="06" >06</option>
+                            <option value="07" >07</option>
+                            <option value="08" >08</option>
+                            <option value="09" >09</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                            <option value="13" >13</option>
+                            <option value="14" >14</option>
+                            <option value="15" >15</option>
+                            <option value="16" >16</option>
+                            <option value="17" >17</option>
+                            <option value="18" >18</option>
+                            <option value="19" >19</option>
+                            <option value="20" >20</option>
+                            <option value="21" >21</option>
+                            <option value="22" >22</option>
+                            <option value="23" >23</option>
+                            <option value="24" >24</option>
+                            <option value="25" >25</option>
+                            <option value="26" >26</option>
+                            <option value="27" >27</option>
+                            <option value="28" >28</option>
+                            <option value="29" >29</option>
+                            <option value="30" >30</option>
+                            <option value="31" >31</option>
+                          </select> 
+            <select name="search[entrance][from][month]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-from-month">
+              <option value=""></option>
+                            <option value="01" >01</option>
+                            <option value="02" >02</option>
+                            <option value="03" >03</option>
+                            <option value="04" >04</option>
+                            <option value="05" >05</option>
+                            <option value="06" >06</option>
+                            <option value="07" >07</option>
+                            <option value="08" >08</option>
+                            <option value="09" >09</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                          </select> 
+            <select name="search[entrance][from][year]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-from-year">
+              <option value=""></option>
+                            <option value="1969" >1969</option>
+                            <option value="1970" >1970</option>
+                            <option value="1971" >1971</option>
+                            <option value="1972" >1972</option>
+                            <option value="1973" >1973</option>
+                            <option value="1974" >1974</option>
+                            <option value="1975" >1975</option>
+                            <option value="1976" >1976</option>
+                            <option value="1977" >1977</option>
+                            <option value="1978" >1978</option>
+                            <option value="1979" >1979</option>
+                            <option value="1980" >1980</option>
+                            <option value="1981" >1981</option>
+                            <option value="1982" >1982</option>
+                            <option value="1983" >1983</option>
+                            <option value="1984" >1984</option>
+                            <option value="1985" >1985</option>
+                            <option value="1986" >1986</option>
+                            <option value="1987" >1987</option>
+                            <option value="1988" >1988</option>
+                            <option value="1989" >1989</option>
+                            <option value="1990" >1990</option>
+                            <option value="1991" >1991</option>
+                            <option value="1992" >1992</option>
+                            <option value="1993" >1993</option>
+                            <option value="1994" >1994</option>
+                            <option value="1995" >1995</option>
+                            <option value="1996" >1996</option>
+                            <option value="1997" >1997</option>
+                            <option value="1998" >1998</option>
+                            <option value="1999" >1999</option>
+                            <option value="2000" >2000</option>
+                            <option value="2001" >2001</option>
+                            <option value="2002" >2002</option>
+                            <option value="2003" >2003</option>
+                            <option value="2004" >2004</option>
+                            <option value="2005" >2005</option>
+                            <option value="2006" >2006</option>
+                            <option value="2007" >2007</option>
+                            <option value="2008" >2008</option>
+                            <option value="2009" >2009</option>
+                            <option value="2010" >2010</option>
+                            <option value="2011" >2011</option>
+                            <option value="2012" >2012</option>
+                            <option value="2013" >2013</option>
+                            <option value="2014" >2014</option>
+                            <option value="2015" >2015</option>
+                            <option value="2016" >2016</option>
+                            <option value="2017" >2017</option>
+                            <option value="2018" >2018</option>
+                            <option value="2019" >2019</option>
+                          </select> <br/>
+            sampai: <br/>
+            <select name="search[entrance][to][day]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-to-day">
+              <option value=""></option>
+                            <option value="01" >01</option>
+                            <option value="02" >02</option>
+                            <option value="03" >03</option>
+                            <option value="04" >04</option>
+                            <option value="05" >05</option>
+                            <option value="06" >06</option>
+                            <option value="07" >07</option>
+                            <option value="08" >08</option>
+                            <option value="09" >09</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                            <option value="13" >13</option>
+                            <option value="14" >14</option>
+                            <option value="15" >15</option>
+                            <option value="16" >16</option>
+                            <option value="17" >17</option>
+                            <option value="18" >18</option>
+                            <option value="19" >19</option>
+                            <option value="20" >20</option>
+                            <option value="21" >21</option>
+                            <option value="22" >22</option>
+                            <option value="23" >23</option>
+                            <option value="24" >24</option>
+                            <option value="25" >25</option>
+                            <option value="26" >26</option>
+                            <option value="27" >27</option>
+                            <option value="28" >28</option>
+                            <option value="29" >29</option>
+                            <option value="30" >30</option>
+                            <option value="31" >31</option>
+                          </select> 
+            <select name="search[entrance][to][month]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-to-month">
+              <option value=""></option>
+                            <option value="01" >01</option>
+                            <option value="02" >02</option>
+                            <option value="03" >03</option>
+                            <option value="04" >04</option>
+                            <option value="05" >05</option>
+                            <option value="06" >06</option>
+                            <option value="07" >07</option>
+                            <option value="08" >08</option>
+                            <option value="09" >09</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                          </select> 
+            <select name="search[entrance][to][year]" class="form-control" style="width: 32.5%;display: inline-block;" id="search-entrance-to-year">
+              <option value=""></option>
+                            <option value="1969"  >1969</option>
+                            <option value="1970"  >1970</option>
+                            <option value="1971"  >1971</option>
+                            <option value="1972"  >1972</option>
+                            <option value="1973"  >1973</option>
+                            <option value="1974"  >1974</option>
+                            <option value="1975"  >1975</option>
+                            <option value="1976"  >1976</option>
+                            <option value="1977"  >1977</option>
+                            <option value="1978"  >1978</option>
+                            <option value="1979"  >1979</option>
+                            <option value="1980"  >1980</option>
+                            <option value="1981"  >1981</option>
+                            <option value="1982"  >1982</option>
+                            <option value="1983"  >1983</option>
+                            <option value="1984"  >1984</option>
+                            <option value="1985"  >1985</option>
+                            <option value="1986"  >1986</option>
+                            <option value="1987"  >1987</option>
+                            <option value="1988"  >1988</option>
+                            <option value="1989"  >1989</option>
+                            <option value="1990"  >1990</option>
+                            <option value="1991"  >1991</option>
+                            <option value="1992"  >1992</option>
+                            <option value="1993"  >1993</option>
+                            <option value="1994"  >1994</option>
+                            <option value="1995"  >1995</option>
+                            <option value="1996"  >1996</option>
+                            <option value="1997"  >1997</option>
+                            <option value="1998"  >1998</option>
+                            <option value="1999"  >1999</option>
+                            <option value="2000"  >2000</option>
+                            <option value="2001"  >2001</option>
+                            <option value="2002"  >2002</option>
+                            <option value="2003"  >2003</option>
+                            <option value="2004"  >2004</option>
+                            <option value="2005"  >2005</option>
+                            <option value="2006"  >2006</option>
+                            <option value="2007"  >2007</option>
+                            <option value="2008"  >2008</option>
+                            <option value="2009"  >2009</option>
+                            <option value="2010"  >2010</option>
+                            <option value="2011"  >2011</option>
+                            <option value="2012"  >2012</option>
+                            <option value="2013"  >2013</option>
+                            <option value="2014"  >2014</option>
+                            <option value="2015"  >2015</option>
+                            <option value="2016"  >2016</option>
+                            <option value="2017"  >2017</option>
+                            <option value="2018"  >2018</option>
+                            <option value="2019"  >2019</option>
+                          </select>
+          </div>  
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-danger" href="/home/catalog.html?clear">Bersihkan</a>
+          <input type="submit" name="submit" class="btn btn-success" value="Cari"/>
+        </div>
+      </form>
+    </div>  
+  </div>
+</div> 
+
+    </div>
+
+    <div class="footer">
+      <div class="container">
+<div class="row">
+		
+		<div class="col-md-12">
+		
+			<div style="background-color:#FFF;min-height:50px;border-radius:10px;color:#666;margin-bottom:12px;">
+				<div class="box-title-small">INFOGRAFIS</div>
+				<br>
+				<div style="min-height:0px;text-align:center">
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#karyailmiah">Akses Online Karya Ilmiah</button>
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#ebook">Akses Online E-book</button>
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#booking">Reservasi Online</button>
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#rent">Peminjaman Buku</button>
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#return">Pengembalian Buku</button>
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#extension">Perpanjangan Buku Online</button> 
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#skbp">Prosedur Surat Keterangan Bebas Perpustakaan (SKBP)</button>  
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#upload">Upload Skripsi</button>   
+					<button style="margin:5px 10px" class="btn btn-warning" type="button" data-toggle="modal" data-target="#approval">Approval Tugas Akhir</button>    
+					<!--
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#karyailmiah">Akses Online Karya Ilmiah</button></div>
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#ebook">Akses Online E-book</button></div>
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#booking">Reservasi Online</button></div>
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#rent">Peminjaman Buku</button></div>
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#return">Pengembalian Buku</button></div>
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#extension">Perpanjangan Buku Online</button></div> 
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#skbp">Prosedur Surat Keterangan Bebas Perpustakaan (SKBP)</button></div>   
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#upload">Upload Skripsi</button></div>   
+					<div><button style="margin:5px 10px" class="btn btn-danger" type="button" data-toggle="modal" data-target="#approval">Approval Tugas Akhir</button></div> --> 
+				</div>
+				<br>
+			</div> 
+		</div>
+		</div>
+      <div class="row">
+        <div class="col-md-4">
+			<!--
+			<div style="background-color:#FFF;min-height:306px;border-radius:10px;">
+				<div class="box-title" style="border-radius:10px 10px 0 0;">TELKOM UNIVERSITY OPEN LIBRARY</div>
+				<table width="100%"  style="cursor:pointer;margin-top:40px;"> 
+				<tr>
+					<td align="center" style="color:#C9302C;">
+						<p><a href="http://www.telkomuniversity.ac.id"><img src="/images/faq_cover" width="60%"></a></p>
+						<h4>Telkom University Library</h4>
+						<p>Copyright © 2011 - Telkom Open Library</p>
+						<p><span></span> <a href="http://www.facebook.com/TelkomOpenLibrary">Telkom Open Library</a></p>
+					</td> 
+				</tr>  
+				</table> 			
+			</div>	
+			-->
+			<div style="background-color:#FFF;min-height:306px;border-radius:10px;margin-bottom:13px;">
+				<div class="box-title" style="border-radius:10px 10px 0 0;">SOCIAL MEDIA</div>
+				<table width="100%" > 
+				<tr>
+					<td align="center" >  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>    <div class="fb-like-box" data-href="http://www.facebook.com/TelkomOpenLibrary" 
+      data-width="250" data-height="The pixel height of the plugin" data-colorscheme="light" 
+      data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+	 <br><!--
+	 <div style="background-color:#e2dcc5;padding:10px;"><img src="/images/instagram.jpg" width="30" title="Instagram"> <a href="https://instagram.com/openlibrary.telu/" target="_blank" style="color:#9d6459;font-weight:bold;">openlibrary.telu </a></div>-->
+	<style>.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+<a href="https://www.instagram.com/openlibrary.telu/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></td> 
+				</tr>  
+				</table>  
+			</div>	  
+			<!-- Modal -->
+			<div id="askalibrarian" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content"> 
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/askalibrarian.jpg" width="100%">
+				  </div> 
+				</div>
+
+			  </div>
+			</div>	
+			
+        </div>
+		<div class="col-md-4" >
+			<div style="background-color:#FFF;min-height:146px;border-radius:10px;margin-bottom:13px;">
+				<div class="box-title" style="border-radius:10px 10px 0 0;">ASK A LIBRARIAN</div>
+				<table width="100%"  style="cursor:pointer;" data-toggle="modal" data-target="#askalibrarian"> 
+				<tr>
+					<td align="center"><img src="/images/asklibrarian_cover.jpg" width="70%"></td> 
+				</tr>  
+				</table>  
+			</div>	  
+			<div style="background-color:#FFF;min-height:146px;border-radius:10px;margin-bottom:0px">
+				<div class="box-title" style="border-radius:10px 10px 0 0;">FAQ</div>
+				<table width="100%"  style="cursor:pointer;" data-toggle="modal" data-target="#faq"> 
+				<tr>
+					<td align="center"><img src="/images/faq_cover.jpg?rand=333424" width="70%"></td> 
+				</tr>  
+				</table>  
+			</div>
+	
+			<!-- Modal -->
+			
+			<div id="faq" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/faq_detail.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			<!-- end modal -->
+        </div>
+	<!--
+		<div class="col-md-4" >
+			
+			<div style="background-color:#FFF;min-height:306px;border-radius:10px;margin-bottom:13px;">
+				<div class="box-title" style="border-radius:10px 10px 0 0;">FAQ</div>
+				<table width="100%"  style="cursor:pointer;" data-toggle="modal" data-target="#faq"> 
+				<tr>
+					<td align="center"><img src="/images/faq_cover.jpg" width="90%"></td> 
+				</tr>  
+				</table>  
+			</div>	
+-->			
+			<!-- Modal -->
+			<!--
+			<div id="faq" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+-->
+				<!-- Modal content-->
+				<!--
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/faq_detail.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+        </div>
+		-->
+		<div class="col-md-4" > 
+			<div style="background-color:#FFF;min-height:70px;border-radius:10px;color:#666;margin-bottom:12px;">
+				<div class="box-title-small">DISCUSSION ROOM RESERVATION</div>
+				<table width="100%" height="40px" style="cursor:pointer;" onclick="window.open('https://openlibrary.telkomuniversity.ac.id/room','_blank')"> 
+				<tr>
+					
+					<td align="center"><img src="/images/discussion_room.jpg" width="36%"></td>
+				</tr> 
+				</table>  
+			</div> 
+			 <div style="background-color:#FFF;min-height:70px;border-radius:10px;color:#666;margin-bottom:13px;	">
+				<div class="box-title-small">CHECK PLAGIARISM</div>
+				<table width="100%" height="49px" style="cursor:pointer;" onclick="window.open('/home/information/id/30.html','_blank')"> 
+				<tr>
+					<td align="center"><img src="/images/ithenticate-logo.png" width="55%"></td>
+				</tr> 
+				</table>
+			</div> 
+			<div style="background-color:#FFF;min-height:100px;border-radius:10px;color:#666;">
+				<div class="box-title-small">E - CATALOGUE</div>
+				<table width="100%" height="49px" style="cursor:pointer;" onclick="window.open('/home/information/id/53.html','_blank')"> 
+				<tr>
+					<td align="center"><img src="/images/ecatalog.jpg" width="80%"></td>
+				</tr> 
+				</table> 
+			</div> 
+        </div> 
+      </div>
+	  
+
+      <div class="row"> 
+		
+       <div class="col-md-6">
+		
+			<div style="background-color:#FFF;min-height:50px;border-radius:10px;color:#666;margin-bottom:12px;">
+				<div class="box-title-small">VIDEO TESTIMONI</div>
+				<br>
+				<div style="text-align:center"><iframe width="95%" height="400" src="https://www.youtube.com/embed/o1vudud2ysY"></iframe></div>
+				<br>
+			</div> 
+		</div>
+        <div class="col-md-6">
+		
+			<div style="background-color:#FFF;min-height:50px;border-radius:10px;color:#666;margin-bottom:12px;">
+				<div class="box-title-small">VIDEO PROFILE</div>
+				<br>
+				<div style="text-align:center"><iframe width="95%" height="400" src="https://www.youtube.com/embed/xeJXgiyzYW0"></iframe></div>
+				<br>
+			</div> 
+		</div>
+		
+		
+		<!-- Modal -->
+			
+			<div id="karyailmiah" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/akses_karya_ilmiah.jpeg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="ebook" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/akses_ebook.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="booking" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/reservasi_ruangan.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="rent" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/peminjaman.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="return" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/pengembalian.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="extension" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/perpanjangan_online.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="skbp" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/prosedur_skbp.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="upload" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/upload_skripsi.jpg" width="100%"><br><br>
+					<img src="/images/upload_skripsi_2.jpg" width="100%"><br><br>
+					<img src="/images/upload_skripsi_3.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			
+			<div id="approval" class="modal fade" role="dialog">
+			  <div class="modal-dialog" style="width:80% !important">
+		
+				<!-- Modal content-->
+		
+				<div class="modal-content">
+				  
+				  <div class="modal-body">
+					<div   style="text-align:right;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+					</div><br>
+					<img src="/images/aprroval_tugas_akhir.jpg" width="100%">
+				  </div>
+				   
+				</div>
+
+			  </div>
+			</div>
+			<!-- end modal -->
+	</div>
+	  <script>
+  // This is called with the results from from FB.getLoginStatus().
+  // function statusChangeCallback(response) {
+    // console.log('statusChangeCallback');
+    // console.log(response);
+    // // The response object is returned with a status field that lets the
+    // // app know the current login status of the person.
+    // // Full docs on the response object can be found in the documentation
+    // // for FB.getLoginStatus().
+    // if (response.status === 'connected') {
+      // // Logged into your app and Facebook.
+      // testAPI();
+    // } else if (response.status === 'not_authorized') {
+      // // The person is logged into Facebook, but not your app.
+      // document.getElementById('status').innerHTML = 'Please log ' +
+        // 'into this app.';
+    // } else {
+      // // The person is not logged into Facebook, so we're not sure if
+      // // they are logged into this app or not.
+      // document.getElementById('status').innerHTML = 'Please log ' +
+        // 'into Facebook.';
+    // }
+  // }
+
+  // // This function is called when someone finishes with the Login
+  // // Button.  See the onlogin handler attached to it in the sample
+  // // code below.
+  // function checkLoginState() {
+    // FB.getLoginStatus(function(response) {
+      // statusChangeCallback(response);
+    // });
+  // }
+
+  // window.fbAsyncInit = function() {
+  // FB.init({
+    // appId      : '370091649996785',
+    // cookie     : true,  // enable cookies to allow the server to access 
+                        // // the session
+    // xfbml      : true,  // parse social plugins on this page
+    // version    : 'v2.8' // use graph api version 2.8
+  // });
+
+  // // Now that we've initialized the JavaScript SDK, we call 
+  // // FB.getLoginStatus().  This function gets the state of the
+  // // person visiting this page and can return one of three states to
+  // // the callback you provide.  They can be:
+  // //
+  // // 1. Logged into your app ('connected')
+  // // 2. Logged into Facebook, but not your app ('not_authorized')
+  // // 3. Not logged into Facebook and can't tell if they are logged into
+  // //    your app or not.
+  // //
+  // // These three cases are handled in the callback function.
+
+  // FB.getLoginStatus(function(response) {
+    // statusChangeCallback(response);
+  // });
+
+  // };
+
+  // // Load the SDK asynchronously
+  // (function(d, s, id) {
+    // var js, fjs = d.getElementsByTagName(s)[0];
+    // if (d.getElementById(id)) return;
+    // js = d.createElement(s); js.id = id;
+    // js.src = "//connect.facebook.net/en_US/sdk.js";
+    // fjs.parentNode.insertBefore(js, fjs);
+  // }(document, 'script', 'facebook-jssdk'));
+
+  // // Here we run a very simple test of the Graph API after login is
+  // // successful.  See statusChangeCallback() for when this call is made.
+  // function testAPI() {
+    // console.log('Welcome!  Fetching your information.... ');
+    // FB.api('/me', function(response) {
+      // console.log('Successful login for: ' + response.name);
+      // document.getElementById('status').innerHTML =
+        // 'Thanks for logging in, ' + response.name + '!';
+    // });
+  // }
+</script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+<!--
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+-->
+<div id="status">
+</div>
+
+
+      <div class="row footer-location-imtelkom">
+        <hr />
+<div class="col-md-12 col-sm-12 col-lg-12">
+  <h4>Lokasi Perpustakaan</h4>
+</div>
+
+<div class="col-md-4 col-sm-6 col-lg-3">
+  <p class="basic-contact">
+    <span>Gedung Manterawu Lantai 5</span><br/>
+    <small>
+      Jl. Telekomunikasi - Ters. Buah Batu<br/>Bandung 40257 Indonesia<br/>
+            <span class="glyphicon glyphicon-phone-alt"></span> +6222 756 5929<br/>
+                  <span class="glyphicon glyphicon-print"></span> +6222 756 5929<br/>
+                  <span class="glyphicon glyphicon-envelope"></span> library@telkomuniversity.ac.id<br/>
+          </small>
+  </p>
+      <p class="operational-hours">Waktu operasional</p>
+  
+  <table>
+            <tr>
+          <td>Senin - Jumat<br/></td>
+          <td>08:00 - 19:00</td>
+        </tr>
+              <tr>
+          <td>Sabtu<br/></td>
+          <td>08:00 - 13:00</td>
+        </tr>
+                      </table>
+    </div>
+<div class="col-md-4 col-sm-6 col-lg-3">
+  <p class="basic-contact">
+    <span>Kampus Geger Kalong</span><br/>
+    <small>
+      Jl. Geger Kalong No. 1 <br/>Bandung Indonesia<br/>
+            <span class="glyphicon glyphicon-phone-alt"></span> -<br/>
+                  <span class="glyphicon glyphicon-print"></span> +6222 756 5929<br/>
+                  <span class="glyphicon glyphicon-envelope"></span> library@telkomuniversity.ac.id<br/>
+          </small>
+  </p>
+      <p class="operational-hours">Waktu operasional</p>
+  
+  <table>
+            <tr>
+          <td>Senin - Jumat<br/></td>
+          <td>08:00 - 20:00</td>
+        </tr>
+              <tr>
+          <td>Sabtu<br/></td>
+          <td>08:00 - 13.00</td>
+        </tr>
+                      </table>
+    </div>
+
+
+<div class="col-md-4 col-sm-6 col-lg-3">
+  <p class="basic-contact">
+    <p><a href="http://www.telkomuniversity.ac.id"><img src="/images/telkom-university.png" width="60%"></a></p>
+	<h4>Telkom University Library</h4>
+	<p>Copyright © 2011 - Telkom Open Library</p>
+	<p><span></span> <a href="http://www.facebook.com/TelkomOpenLibrary">Telkom Open Library</a></p>
+    <small> 
+    </small>
+  </p>  
+</div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p><br /><img src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"></p>
+        </div>
+      </div>
+
+      </div> 
+    </div>
+    <script src="/sfJqueryReloadedPlugin/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="/jquery-validation/jquery.validate.min.js"></script> 
+    <script src="/jquery-validation/additional-methods.min.js"></script> 
+	
+    <script type="text/javascript">
+      $(document).ready(function () {
+		 
+		  $("#poster").modal("show");
+		  
+        if ($("[rel=tooltip]").length) {
+          $("[rel=tooltip]").tooltip();
+        }
+
+        if ($("[rel=carousel]").length) {
+          $("[rel=carousel]").carousel();
+        }
+        
+        
+        $('#home_catalog').attr('class', 'active');
+      });
+    </script>
+	
+        <div id="modal-register" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" id="form-register">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="modal-register-title">Daftar Sebagai Anggota</h4>
+        </div>
+        <div class="modal-body">
+         <p>Daftar Sebagai anggota untuk dapat mengakses koleksi flippingbook Tugas Akhir kami</p>
+			  <div class="form-group" id="notif" style="display:none"><span style="color:green;">Your account has been made. <br />  Please verify it by clicking the activation link that has been send to your email.</span>
+			  </div>  
+			  <div class="form-group">
+				<label for="inputTitle">Email (wajib menggunakan email institusi)</label>
+				<input type="email" name="inp[C_NIP]" class="form-control" id="C_NIP" placeholder="Email"required> 
+			  </div>  
+			  <div class="form-group">
+				<label for="inputTitle">Password</label>
+				<input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+			  </div>
+			  <div class="form-group">
+				<label for="inputTitle">Nama Lengkap</label>
+				<input type="text" name="inp[NAMA_PEGAWAI]" class="form-control" id="NAMA_PEGAWAI" placeholder="Nama" required>
+			  </div>  
+			  <div class="form-group">
+				<label for="inputTitle">Nama Institusi</label>
+				<input type="text" name="inp[ALAMAT]" class="form-control" id="ALAMAT" placeholder="Nama Institusi" required>
+			  </div>
+			  <div class="form-group">
+				<label for="inputTitle">Handphone</label>
+				<input type="text" name="inp[NO_HP]" class="form-control" id="NO_HP" placeholder="Handphone" required>
+			  </div>  
+			  <div class="form-group">
+				<h1>
+			  </div>  
+        </div>
+        <div class="modal-footer">
+			<button type="button" class="btn btn-default btn-embossed" data-dismiss="modal" id="close">Batal</button>
+			<button type="button" class="btn btn-primary btn-embossed loading" onclick="save()">Daftar</button>
+        </div>
+      </form>
+    </div>  
+  </div>
+</div>
+<script>
+var form = $('#modal-register #form-register');
+// $("#password").rules("add", { regex: "^[^@]$" });
+// jQuery.validator.addMethod("lettersonly", function(value, element) 
+// {
+// return this.optional(element) || /^[^@]$/.test(value);
+// }, "Letters and spaces only please");
+
+ $.validator.addMethod("passwordRegex", function(value, element) {
+        return this.optional(element) || /^[a-z0-9\-_]+$/i.test(value);
+    }, "Password must contain only letters, numbers, underscore, or dashes.");
+var formval = form.validate({   
+	rules: {
+		'inp[C_NIP]' : { 
+            remote: {
+                url :  '/olafa/index.php/api/checkUsername',
+                type: "post" 
+            }
+		} ,
+		'password' : { 
+		   passwordRegex : true,
+           minlength : 5
+		} ,
+		'inp[NO_HP]' : {
+		   digits	: true,
+           minlength : 9
+		}             
+	},
+	messages:{
+        'inp[C_NIP]':{
+			remote: jQuery.validator.format("Your email already taken or must use institute email")
+        }           
+    }
+});
+
+$(document).ready(function() {
+	$(".close").click(function(e){
+		reset();
+	});
+	$("#close").click(function(e){
+		reset();
+	});
+	
+});
+function save() {  
+    if (form.valid()) {
+		$.ajax({
+			url :  '/olafa/index.php/api/register',
+			type: "POST", 
+			cache: false,
+			dataType: "html",
+			data: form.serialize(),
+			//dataType: "JSON",
+			beforeSend : function(){  
+				$('#modal-register .loading').text('Loading...');
+				$('#modal-register .loading').attr('disabled',true);
+			},
+			complete : function(){
+				$('#modal-register .loading').text('Save');
+				$('#modal-register .loading').attr('disabled',false); 
+			},
+			success: function(data)
+			{
+				$('#modal-register #notif').hide();
+				if (data=="true") {
+					reset(); 	
+					$('#modal-register #C_NIP-error').hide();
+					$('#modal-register #C_NIP').removeClass("error");
+					$('#modal-register #C_NIP').addClass("valid");
+					$('#modal-register #notif').show();
+				}
+				else if (data=="exist"){
+					$('#modal-register #C_NIP').removeClass("valid");
+					$('#modal-register #C_NIP').addClass("error");
+					$('#modal-register #C_NIP-error').show();
+					if ( $("#C_NIP-error").hasClass( "error" )) $('#modal-register #C_NIP-error').html("Your email already taken or use");
+					else $('<label  class="error" id="C_NIP-error" for="C_NIP">Your email already taken or use</label>').insertAfter( "#C_NIP" );
+				}else if (data=="false"){ 
+					$('#modal-register #C_NIP').removeClass("valid");
+					$('#modal-register #C_NIP').addClass("error");
+					$('#modal-register #C_NIP-error').show();
+					if ( $("#C_NIP-error").hasClass( "error" )) $('#modal-register #C_NIP-error').html("Must use your institute email");
+					else $('<label  class="error" id="C_NIP-error" for="C_NIP">Must use your institute email</label>').insertAfter( "#C_NIP" );
+				}
+			}
+		}); 
+	} 
+	else $('#modal-register #notif').hide();	
+}
+
+
+function reset() {
+	$('#modal-register #notif').hide();
+    form.validate().resetForm();     
+    form[0].reset();  			
+	$("label.error").hide();
+ 	$(".error").removeClass("error");
+}
+</script>
+
+    
+    
+    <!-- Piwik 
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.openlibrary.telkomuniversity.ac.id"]);
+      _paq.push(["setDomains", ["*.openlibrary.telkomuniversity.ac.id"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u = (("https:" == document.location.protocol) ? "https" : "http") + "://view.monitoring.telkomuniversity.ac.id/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 15]);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript';
+        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <noscript><p><img src="https://view.monitoring.telkomuniversity.ac.id/piwik.php?idsite=15" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+    <!-- Piwik Image Tracker
+    <img src="https://view.monitoring.telkomuniversity.ac.id/piwik.php?idsite=15&rec=1" style="border:0; display: none;" alt="" />
+    <!-- End Piwik -->    
+    
+  </body>
+</html>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5722dfde7ada50bc0277ebc7/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
